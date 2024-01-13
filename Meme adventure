@@ -1,0 +1,95 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Auto Fishing",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddToggle({
+	Name = "Auto Fish Lava",
+	Default = false,
+	Callback = function(Value)
+		_G.Hum = Value
+		While _G.Hum do wait()
+		
+local args = {
+    [1] = "Fishing1"
+}
+
+game:GetService("Players").LocalPlayer.Character.Fishing.Desert.RemoteEvent:FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto Fish Lava",
+	Default = false,
+	Callback = function(Value)
+		_G.Hum = Value
+		While _G.Hum do wait()
+		
+local args = {
+    [1] = "Fishing1"
+}
+
+game:GetService("Players").LocalPlayer.Character.Fishing.Lava.RemoteEvent:FireServer(unpack(args))
+end
+	end    
+})  
+
+Tab:AddToggle({
+	Name = "Auto Fish Snow",
+	Default = false,
+	Callback = function(Value)
+		_G.Hum = Value
+		While _G.Hum do wait()
+		
+local args = {
+    [1] = "Fishing1"
+}
+
+game:GetService("Players").LocalPlayer.Character.Fishing.Snow.RemoteEvent:FireServer(unpack(args))
+end
+	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Op stat",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddToggle({
+	Name = "Op stat",
+	Default = false,
+	Callback = function(Value)
+		_G.Hum(Value)
+		While _G.Hum do wait()
+
+local args = {
+    [1] = "The World Head",
+    [2] = "Armor"
+}
+
+game:GetService("ReplicatedStorage").OtherThing.Tools:FireServer(unpack(args))
+
+local args = {
+    [1] = "Cosmic Orb",
+    [2] = "Armor"
+}
+
+game:GetService("ReplicatedStorage").OtherThing.Tools:FireServer(unpack(args))
+
+local args = {
+    [1] = "Skull Bike",
+    [2] = "Armor"
+}
+
+game:GetService("ReplicatedStorage").OtherThing.Tools:FireServer(unpack(args))
+end
+	end    
+})
+
+OrionLib:Init()# Auto-fish
